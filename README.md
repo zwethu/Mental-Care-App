@@ -1,16 +1,41 @@
-# mental_assistance_app
+Below is an overview of the main folder structure used in this Flutter project, following clean architecture and best practices:
 
-A new Flutter project.
+```
+lib/
+└── src/
+    ├── config/
+    │   └── router/                 # App navigation and routing configuration
+    ├── core/
+    │   ├── constants/              # Core/app-wide constants (not feature-specific)
+    │   ├── exceptions/             # Global exception and error handling classes
+    │   ├── extensions/             # Dart/Flutter extension methods
+    │   └── network/                # Network utilities, e.g., connectivity helpers
+    ├── data/
+    │   ├── datasource/
+    │   │   ├── local/              # Local data sources (DB, shared prefs, etc.)
+    │   │   └── remote/             # Remote data sources (APIs, services)
+    │   ├── models/                 # Data models for API/local storage
+    │   └── repositories/           # Repository implementations (data access)
+    ├── domain/
+    │   ├── entities/               # Business entities (pure domain models)
+    │   ├── repositories/           # Repository interfaces/abstractions
+    │   └── usecases/               # Business logic / use case classes
+    └── presentation/
+        ├── cubits/                 # BLoC/Cubit files for state management
+        ├── pages/                  # Top-level app pages/screens
+        ├── values/                 # UI constants (colors, dimensions, lists, strings)
+        ├── views/                  # Reusable component views
+        └── widgets/                # Shared/general-purpose widgets
 
-## Getting Started
+main.dart                           # App entry point
 
-This project is a starting point for a Flutter application.
+```
 
-A few resources to get you started if this is your first Flutter project:
+### Main Folder Explanations
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **config/** — Global configuration files and routing setup.
+- **core/** — Shared core utilities/constants used across all features.
+- **data/** — Data access (API/local), data models, and repositories.
+- **domain/** — Business logic (entities, repositories, usecases).
+- **presentation/** — UI widgets, screens, state management (Cubits/BLoC), and UI constants.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
