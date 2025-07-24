@@ -5,7 +5,6 @@
 //
 // Future<String?> sendMessageToGroq(String userInput) async {
 //   final url = Uri.parse('https://api.groq.com/openai/v1/chat/completions');
-//   final apiKey = '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'; // Store securely!
 //
 //   final response = await http.post(
 //     url,
