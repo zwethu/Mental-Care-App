@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:mental_assistance_app/src/injector.dart';
 import 'package:mental_assistance_app/src/presentation/pages/chat/chat_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // initialize and setup get_it injector
+  setupInjector();
+
   runApp(const MyApp());
 }
 
@@ -20,5 +26,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
