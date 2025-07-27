@@ -1,4 +1,4 @@
-package com.example.mental_assistance_app
+package com.unit_control.mental_mana
 
 import io.flutter.embedding.android.FlutterActivity
 
